@@ -1,0 +1,12 @@
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/my-next-project:cached
+    working_dir: /my-next-project
+    ports:
+      - "3000:3000"
+    command: sleep infinity
