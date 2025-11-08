@@ -4,6 +4,12 @@
     "service": "app",
     "workspaceFolder": "/my-next-project",
     "remoteUser": "node",
+    "initializeCommand": "/bin/bash .devcontainer/scripts/initialize.sh",
+    "runArgs": [
+        "--env-file",
+        ".devcontainer/.env"
+    ],
+    "postCreateCommand": "/bin/bash .devcontainer/scripts/post-create.sh",
     "customizations": {
         "vscode": {
             "extensions": [
