@@ -1,9 +1,9 @@
 .top {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   overflow: hidden;
   padding: 200px 0;
@@ -16,12 +16,12 @@
   margin-bottom: 1rem;
 }
 
-.description{
+.description {
   text-align: center;
 }
 
-.bgimg{
-  position:absolute;
+.bgimg {
+  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
@@ -34,7 +34,7 @@
   z-index: -1;
 }
 
-.news{
+.news {
   position: relative;
   background-color: #fff;
   width: 840px;
@@ -42,8 +42,14 @@
   padding: 24px 40px;
   border-radius: var(--border-radius);
 }
-.newsTitle{
+.newsTitle {
   font-size: 1.5rem;
+}
+
+.newsLink {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
 }
 
 .list {
@@ -53,15 +59,51 @@
   border-bottom: none;
 }
 
-.link{
-  display:flex;
+.link {
+  display: flex;
   align-items: flex-start;
   gap: 40px;
   padding: 24px 0;
 }
-/*力尽きた…*/
-.image {
 
+.image {
+  width: 200px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.newsItemTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tag {
+  background-color: var(--color-bg-sub);
+  padding: 4px 12px;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .news {
+    width: calc(100% - 160px);
+  }
 }
 
 @media (max-width: 640px) {
@@ -73,13 +115,13 @@
     text-align: left;
   }
 
-  .description{
+  .description {
     text-align: center;
     font-size: 0.9rem;
     text-align: left;
   }
 
-  .bgimg{
+  .bgimg {
     position: absolute;
     top: 0;
     right: 0;
@@ -90,5 +132,15 @@
     align-items: center;
     justify-content: center;
     z-index: -1;
+  }
+  .news {
+    width: calc(100% - 32px);
+    padding: 16px 24px;
+  }
+  .newsLink{
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
   }
 }
