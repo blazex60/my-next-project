@@ -1,11 +1,20 @@
+import { symlink } from "fs"
 import styles from "./index.module.css"
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
             <nav className={styles.nav}>
-                
+                <ul className={styles.items}>
+                    <li classname={styles.item}>
+                        <a href="/members">メンバー</a>
+                    </li>
+                    <li classname={styles.item}>
+                        <a href="/contact">お問い合わせ</a>
+                    </li>
+                </ul>
             </nav>
+            <p className={styles.cr}>© SIMPLE. All Rights Reserved 2024</p>
         </footer>
-    )
+    );
 }
