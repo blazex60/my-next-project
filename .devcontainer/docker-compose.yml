@@ -9,4 +9,4 @@ services:
     working_dir: /my-next-project
     ports:
       - "3000:3000"
-    command: npm run dev
+    command: /bin/bash /my-next-project/.devcontainer/scripts/startup.sh

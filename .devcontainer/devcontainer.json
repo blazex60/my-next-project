@@ -1,6 +1,6 @@
 {
     "name": "my-next-project-devcontainer",
-    "dockerComposeFile":"docker-compose.yml",
+    "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/my-next-project",
     "remoteUser": "node",
@@ -10,6 +10,7 @@
         ".devcontainer/.env"
     ],
     "postCreateCommand": "/bin/bash .devcontainer/scripts/post-create.sh",
+    "postStartCommand": "npm run dev",
     "customizations": {
         "vscode": {
             "extensions": [
